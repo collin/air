@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+const net = require('net');
+
+let waitingForFirstConnection = true;
+function handleConnection(connection) {
+  if (waitingForFirstConnection === false) {
+    connection.destroy();
+  } else {
+    waitingForFirstConnection = true;
+    connection.pipe(process.stdout);
+    connection.on('end', () => server.close());
+  }
+}
+
+const server = net.createServer(handleConnection);
+const port = process.argv[2];
+server.listen(port);

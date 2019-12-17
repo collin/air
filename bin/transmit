@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 const net = require('net');
+const {parseArgs} = require('../parse-args');
 
-const port = process.argv[3]
-const host = process.argv[2]
+const [, {host, port}] = parseArgs(process.argv, {
+  '-p': '--port',
+  '-h': '--host',
+});
+
 const connection = net.createConnection(port, host);
 process.stdin.pipe(connection);
-

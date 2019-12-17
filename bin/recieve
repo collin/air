@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 const net = require('net');
+const {parseArgs} = require('../parse-args');
+
+const [, {port}] = parseArgs(process.argv, {
+  '-p': '--port',
+});
 
 let waitingForFirstConnection = true;
 function handleConnection(connection) {
@@ -13,5 +18,4 @@ function handleConnection(connection) {
 }
 
 const server = net.createServer(handleConnection);
-const port = process.argv[2];
 server.listen(port);

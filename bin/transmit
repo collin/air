@@ -2,10 +2,14 @@
 const net = require('net');
 const {parseArgs} = require('../parse-args');
 
-const [, {host, port}] = parseArgs(process.argv, {
+const [, {host, port, raw}] = parseArgs(process.argv, {
   '-p': '--port',
   '-h': '--host',
+  '-r': '--raw'
 });
 
 const connection = net.createConnection(port, host);
 process.stdin.pipe(connection);
+if (raw) {
+  process.stdin.setRawMode(true);
+}

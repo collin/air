@@ -4,6 +4,10 @@ A pair of scripts to transmit files over the network.
 
 For use in two terminals that can find each other over the network.
 
+## Caveat
+
+Treat this as an interesting experiment and not as a secure means for transferring files within potentially adversarial network conditions.
+
 ## Requirements
 
 You'll need `node`. This project uses ESM Modules. Reccomend using node v12 and above.

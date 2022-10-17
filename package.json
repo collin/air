@@ -1,0 +1,25 @@
+{
+  "name": "air",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parse-args.js",
+  "type": "module",
+  "bin": {
+    "recieve": "./bin/recieve.js",
+    "transmit": "./bin/transmit.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collin/air.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/collin/air/issues"
+  },
+  "homepage": "https://github.com/collin/air#readme"
+}

@@ -10,7 +10,7 @@ if (help) {
   console.error(`
 usage:
 
-  recieve -p 4545 > outFile.txt
+  bin/recieve.js -p 4545 > outFile.txt
 
 -p, --port: (required) port number to listen for transmitted files on
 -h, --help: print this help message

@@ -14,13 +14,13 @@ You'll need `node`. This project uses ESM Modules. Reccomend using node v12 and 
 
 ## Reciever
 
-`recieve -p 4545 > outFile.txt`
+`bin/recieve.js -p 4545 > outFile.txt`
 
 The reciever will stay open until a file has been sent to it. File data will be emitted over stdout on the reciever. The reciever will terminate when the transmitter closes the connection.
 
 ## Transmitter
 
-`transmit -p 4545 -h 127.0.0.1 < infile.txt`
+`bin/transmit.js -p 4545 -h 127.0.0.1 < infile.txt`
 
 The transmitter will read from stdin, and send data directly to the specified reciever.
 

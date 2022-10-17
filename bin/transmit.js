@@ -12,7 +12,7 @@ if (help) {
   console.error(`
 usage:
 
-  transmit -p 4545 -h 127.0.0.1 < infile.txt
+  bin/transmit.js -p 4545 -h 127.0.0.1 < infile.txt
 
 -p, --port: (required) destination port to transmit file to
 -h, --host: (required) destination host to transmit file to

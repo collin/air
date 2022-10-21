@@ -23,7 +23,7 @@ function handleConnection(connection) {
   if (waitingForFirstConnection === false) {
     connection.destroy();
   } else {
-    waitingForFirstConnection = true;
+    waitingForFirstConnection = false;
     connection.pipe(process.stdout);
     connection.on("end", () => server.close());
   }
